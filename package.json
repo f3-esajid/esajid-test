@@ -1,18 +1,40 @@
 {
-  "name": "example-app",
-  "scripts": {
-    "build": "webpack --mode development --entry ./src/client/index.js --output ./static/bundle.js",
-    "start": "node src/server/app.js"
+  "name": "calculator",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "http://ahfarmer.github.io/calculator",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.17.1",
+    "react-scripts": "^3.0.1"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "big.js": "^5.2.2",
+    "github-fork-ribbon-css": "^0.2.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
-  "devDependencies": {
-    "@sucrase/webpack-loader": "^2.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "sucrase": "^3.15.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
